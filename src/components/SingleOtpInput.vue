@@ -15,7 +15,7 @@
       @focus="handleOnFocus"
       @blur="handleOnBlur"
     />
-    <span v-if="!isLastChild && separator">
+    <span v-if="index === 1 && separator">
       <span v-html="separator"></span>
     </span>
   </div>
@@ -48,6 +48,9 @@ export default {
     },
     isLastChild: {
       type: Boolean,
+    },
+    index: {
+      type: Number,
     },
   },
   data() {
@@ -88,9 +91,9 @@ export default {
       const keyEvent = (event) || window.event;
       const charCode = (keyEvent.which) ? keyEvent.which : keyEvent.keyCode;
       if (this.isCodeNumeric(charCode)
-          || (charCode === 8)
-          || (charCode === 86)
-          || (charCode === 46)) {
+        || (charCode === 8)
+        || (charCode === 86)
+        || (charCode === 46)) {
         this.$emit('on-keydown', event);
       } else {
         keyEvent.preventDefault();

@@ -15,6 +15,7 @@
       :input-type="inputType"
       :input-classes="inputClasses"
       :is-last-child="i === numInputs - 1"
+      :index="i"
       :should-auto-focus="shouldAutoFocus"
       @on-change="handleOnChange"
       @on-keydown="handleOnKeyDown"

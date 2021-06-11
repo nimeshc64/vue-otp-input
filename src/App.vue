@@ -5,7 +5,7 @@
       <v-otp-input
         ref="otpInput0"
         input-classes="otp-input"
-        separator="-"
+        separator="."
         :num-inputs="4"
         :should-auto-focus="true"
         @on-change="handleOnChange"

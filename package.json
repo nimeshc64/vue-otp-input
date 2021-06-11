@@ -1,5 +1,5 @@
 {
-  "name": "@nc/vue-otp-input",
+  "name": "nc-vue-otp-input",
   "version": "1.0.8",
   "description": "A fully customizable, one-time password input component for the web built with Vue 2.x.",
   "author": "Bach Duong <bachdgvn@gmail.com>",
